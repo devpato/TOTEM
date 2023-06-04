@@ -1,0 +1,20 @@
+// Navbar.scss
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: orange;
+    height: 10%;
+    padding: 0 20px;
+
+    .text {
+        color: white;
+        font-size: 18px;
+    }
+}
+  
+
+  
