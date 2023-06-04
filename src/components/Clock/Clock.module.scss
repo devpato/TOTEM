@@ -1,0 +1,19 @@
+// Clock.scss
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    height: 10%;
+
+    .hour {
+        margin-right: 10px;
+    }
+    
+    .minute {
+        margin-left: 10px;
+    }
+  }
+  
