@@ -6,17 +6,17 @@ import pyramid from '../../assets/pyramid.png';
 const Footer = () => {
   return (
     <footer className={styles.grid}>
-        <div className={styles['item']}>
+        <div className={styles.item}>
             <img src={pyramid}/>
-            <p className={styles['text']}>totem.mx</p>
+            <p className={styles.text}>totem.mx</p>
         </div>
-        <div className={styles['item']}>
+        <div className={`${styles.item} ${styles.touch}`}>
             <img src={tapIcon}/>
-            <p className={styles['text']}>Touch screen to start</p>
+            <p>Touch screen to start</p>
         </div>
-        <div className={styles['item']}>
+        <div className={styles.item}>
             <img src={qrCode}/>
-            <p className={styles['text']}>Open TOTEM on your phone</p>
+            <p className={styles.text}>Open TOTEM on your phone</p>
         </div>
     </footer>
   );

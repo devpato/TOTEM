@@ -2,13 +2,14 @@
 .navbar {
     position: absolute;
     top: 0;
+    z-index: 1;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: orange;
-    height: 10%;
-    padding: 0 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
 
     .text {
         color: white;

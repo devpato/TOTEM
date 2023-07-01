@@ -1,11 +1,16 @@
 import './App.css'
-import AdvertisementScreen from './pages/AdvertisementScreen/AdvertisementScreen'
+//import HomeScreen from './pages/HomeScreen/HomeScreen';
+// import AdvertisementScreen from './pages/AdvertisementScreen/AdvertisementScreen'
+import GMap from './components/Map/Map';
 
 function App() {
 
   return (
     <>
-      <AdvertisementScreen/>
+    hello
+      {/* <AdvertisementScreen/> */}
+      {/* <HomeScreen/> */}
+      <GMap/>
     </>
   )
 }
