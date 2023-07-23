@@ -6,6 +6,7 @@ import demoFancyMapStyles from "./demoFancyMapStyles.json";
 import visa from "../../assets/icons/visa.png";
 import res from "../../assets/icons/restaurant.png";
 import { FaStar } from 'react-icons/fa';
+import Navbar from '../../components/Navbar/Navabar';
 
 const center = { lat: 20.214788 , lng: -87.430588};
 function GMap() {
@@ -45,6 +46,7 @@ function GMap() {
 
   return (
     <div className="App">
+      <Navbar/>
       {!isLoaded ? (
         <h1>Loading...</h1>
       ) : (
