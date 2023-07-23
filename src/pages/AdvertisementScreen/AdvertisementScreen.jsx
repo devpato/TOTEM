@@ -10,8 +10,8 @@ import Navbar from '../../components/Navbar/Navabar';
 const AdvertisementScreen = () => {
 
     const images = [
-        image1,
-        image2
+        image2,
+        image1
     ];
   const navigate = useNavigate();
   const [showCarousel, setShowCarousel] = useState(false);
@@ -24,24 +24,25 @@ const AdvertisementScreen = () => {
       timeout = setTimeout(() => setShowCarousel(true), 1000); // 5 minutes (300000 milliseconds)
     };
 
-    // const handleUserActivity = () => {
-    //   setShowCarousel(false);
-    //   resetTimeout();
-    // };
+    const handleUserActivity = () => {
+      setShowCarousel(false);
+      resetTimeout();
+      navigate('/home');
+    };
 
     resetTimeout();
 
-    // document.addEventListener('mousemove', handleUserActivity);
-    // document.addEventListener('keydown', handleUserActivity);
-    // document.addEventListener('mousedown', handleUserActivity);
-    // document.addEventListener('touchstart', handleUserActivity);
+    document.addEventListener('mousemove', handleUserActivity);
+    document.addEventListener('keydown', handleUserActivity);
+    document.addEventListener('mousedown', handleUserActivity);
+    document.addEventListener('touchstart', handleUserActivity);
 
     return () => {
       clearTimeout(timeout);
-    //   document.removeEventListener('mousemove', handleUserActivity);
-    //   document.removeEventListener('keydown', handleUserActivity);
-    //   document.removeEventListener('mousedown', handleUserActivity);
-    //   document.removeEventListener('touchstart', handleUserActivity);
+      document.removeEventListener('mousemove', handleUserActivity);
+      document.removeEventListener('keydown', handleUserActivity);
+      document.removeEventListener('mousedown', handleUserActivity);
+      document.removeEventListener('touchstart', handleUserActivity);
     };
   }, []);
 
