@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-//import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './AdverstisementScreen.module.scss'
 import image1 from '../../assets/image1.jpeg';
 import image2 from '../../assets/image2.jpeg'
 import PictureSlider from '../../components/PictureSlider/PictureSlider';
-import Footer from '../../components/Footer/Footer';
+// import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navabar';
 
 const AdvertisementScreen = () => {
@@ -13,7 +13,7 @@ const AdvertisementScreen = () => {
         image1,
         image2
     ];
-  //const history = useHistory();
+  const navigate = useNavigate();
   const [showCarousel, setShowCarousel] = useState(false);
 
   useEffect(() => {
@@ -46,8 +46,7 @@ const AdvertisementScreen = () => {
   }, []);
 
   const handleClick = () => {
-    alert('HI')
-    //history.push('/home'); // Redirect to the home component
+    navigate('/home');
   };
 
   return (
@@ -56,7 +55,6 @@ const AdvertisementScreen = () => {
             <>
                 <Navbar/>
                 <PictureSlider images={images}/>
-                <Footer/>
             </>
         )}
         

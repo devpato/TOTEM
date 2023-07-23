@@ -2,16 +2,16 @@
 import Navbar from '../../components/Navbar/Navabar';
 import styles from './HomeScreen.module.scss';
 import { BiMap, BiListUl } from 'react-icons/bi';
-
+import { useNavigate } from 'react-router-dom';
 const HomeScreen = () => {
-  //const history = useHistory();
+ const navigate = useNavigate();
 
   const handleMapButtonClick = () => {
-    //history.push('/map');
+    navigate('/mapa');
   };
 
   const handleGuideButtonClick = () => {
-    //history.push('/guide');
+    alert('OPEN GUIDE COMPONENT')
   };
 
   return (
