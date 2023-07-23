@@ -1,8 +1,9 @@
 .infoWindow {
     display: flex;
     flex-direction: column;
-}
-
-.stars {
-    color: goldenrod;
+    
+    svg {
+        color: goldenrod;
+        font-size: 24px;
+    }
 }

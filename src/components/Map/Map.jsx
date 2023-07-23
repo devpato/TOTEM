@@ -1,5 +1,4 @@
 import { GoogleMap, useLoadScript, Marker,MarkerF, InfoWindowF } from "@react-google-maps/api";
-import styles from './Map.module.scss';
 import { useState } from "react";
 import { useMemo } from "react";
 import demoFancyMapStyles from "./demoFancyMapStyles.json";
@@ -7,6 +6,7 @@ import visa from "../../assets/icons/visa.png";
 import res from "../../assets/icons/restaurant.png";
 import { FaStar } from 'react-icons/fa';
 import Navbar from '../../components/Navbar/Navabar';
+import styles from './Map.module.scss';
 
 const center = { lat: 20.214788 , lng: -87.430588};
 function GMap() {
@@ -85,8 +85,20 @@ function GMap() {
                 >
                   <div className={styles.infoWindow}>
                     <h3>{infoWindowData.name}</h3>
-                    <div className={styles.stars}>
-                      <FaStar/>
+                    <div 
+                    className={styles.stars} 
+                    style={
+                        {
+                          color: "goldenrod",
+                          ["font-size"]: "24px"
+                        }
+                      }>
+                      <FaStar style={
+                        {
+                          color: "goldenrod",
+                          ["font-size"]: "24px"
+                        }
+                      }/>
                       <FaStar/>
                       <FaStar/>
                       <FaStar/>
