@@ -2,11 +2,15 @@ import { GoogleMap, useLoadScript, Marker,MarkerF, InfoWindowF } from "@react-go
 import { useState } from "react";
 import { useMemo } from "react";
 import demoFancyMapStyles from "./demoFancyMapStyles.json";
-import visa from "../../assets/icons/visa.png";
-import res from "../../assets/icons/restaurant.png";
 import { FaStar } from 'react-icons/fa';
 import Navbar from '../../components/Navbar/Navabar';
 import styles from './Map.module.scss';
+// LOGOS
+import visa from "../../assets/icons/visa.png";
+import res from "../../assets/icons/restaurant.png";
+import sel from "../../assets/icons/selina.png";
+import zorba from "../../assets/icons/zorba.png";
+import umo from "../../assets/icons/umo.png";
 
 const center = { lat: 20.214788 , lng: -87.430588};
 function GMap() {
@@ -29,6 +33,24 @@ function GMap() {
       address: "Carretera estatal Tulum - Boca Paila, Parcela 1744-A", 
       lat: 20.199970953321724, lng: -87.45409545990833,
       icon: res
+     },
+     { 
+      name: "Selina Tulum",
+      address: "Carr. Tulum-Boca Paila Km. 7.5, Tulum Beach, Zona Hotelera", 
+      lat: 20.155614402054113, lng: -87.45663926179229,
+      icon: sel
+     },
+     { 
+      name: "Zorba Tulum",
+      address: "Carr. Tulum-Boca Paila Km. 9, Tulum Beach, Zona Hotelera", 
+      lat: 20.13848611253323, lng: -87.4618182046472,
+      icon: zorba
+     },
+     { 
+      name: "UMO Smoke Shop (Bagatelle)",
+      address: "Carr. Tulum-Boca Paila Km 7, Tulum Beach", 
+      lat: 20.15376227521633, lng: -87.45752236705873,
+      icon: umo
      }
   ];
 
