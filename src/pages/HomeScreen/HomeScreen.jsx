@@ -1,5 +1,5 @@
 //import { useHistory } from 'react-router-dom';
-import Navbar from '../../components/Navbar/Navabar';
+// import Navbar from '../../components/Navbar/Navabar';
 import styles from './HomeScreen.module.scss';
 import { BiMap, BiListUl } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
@@ -16,7 +16,7 @@ const HomeScreen = () => {
 
   return (
     <>
-     <Navbar/>
+     {/* <Navbar/> */}
         <div className={`${styles['bg-image']}`}></div>
         <div className={`${styles['home-screen']}`}>
             <div className={`${styles['button-container']}`}>

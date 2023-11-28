@@ -7,3 +7,12 @@
         font-size: 24px;
     }
 }
+
+img[alt~="Google"] {
+    display: none;
+}
+
+.gm-style .gm-style-iw-c {
+    background-color: #f9c9b4;
+    color: red;
+}

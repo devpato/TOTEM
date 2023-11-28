@@ -19,8 +19,9 @@ const Clock = () => {
 
   return (
     <div className={styles.clock}>
-      <div className={styles.hour}>{hours}</div>:
-      <div className={styles.minute}>{minutes}</div>
+      <span className={styles.hour}>{hours <10 ? `0${hours}` : hours}</span>:
+      <span className={styles.minute}>{minutes <10 ? `0${minutes}` : minutes}</span>
+      <span>{hours >= 12 ? 'PM' : 'AM'}</span>
     </div>
   );
 };

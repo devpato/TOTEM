@@ -1,23 +1,31 @@
-import { GoogleMap, useLoadScript, Marker,MarkerF, InfoWindowF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF, InfoWindowF } from "@react-google-maps/api";
 import { useState } from "react";
-import { useMemo } from "react";
+// import { useMemo } from "react";
 import demoFancyMapStyles from "./demoFancyMapStyles.json";
-import { FaStar } from 'react-icons/fa';
+// import { FaStar } from 'react-icons/fa';
 import Navbar from '../../components/Navbar/Navabar';
 import styles from './Map.module.scss';
 // LOGOS
 import visa from "../../assets/icons/visa.png";
-import res from "../../assets/icons/restaurant.png";
+// import res from "../../assets/icons/restaurant.png";
 import sel from "../../assets/icons/selina.png";
-import zorba from "../../assets/icons/zorba.png";
-import umo from "../../assets/icons/umo.png";
+// import zorba from "../../assets/icons/zorba.png";
+// import umo from "../../assets/icons/umo.png";
+import rdt from "../../assets/icons/rdt.png";
 
 const center = { lat: 20.214788 , lng: -87.430588};
 function GMap() {
 
+  const childLabel = document.querySelector('div .gmnoprint');
+  const label = childLabel?.parentNode;
+  if(label?.style?.display) {
+    label.style.display = "none";
+  }
+  
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyByVGlyxbZOCXx-J_sTzSIFp6klHQX7XB4",
   });
+  // eslint-disable-next-line no-unused-vars
   const [mapRef, setMapRef] = useState();
   const [isOpen, setIsOpen] = useState(false);
   const [infoWindowData, setInfoWindowData] = useState();
@@ -29,10 +37,10 @@ function GMap() {
       icon: visa
      },
     { 
-      name: "Bonbonniere",
+      name: "Reporte Diario Tulum",
       address: "Carretera estatal Tulum - Boca Paila, Parcela 1744-A", 
       lat: 20.199970953321724, lng: -87.45409545990833,
-      icon: res
+      icon: rdt
      },
      { 
       name: "Selina Tulum",
@@ -40,18 +48,18 @@ function GMap() {
       lat: 20.155614402054113, lng: -87.45663926179229,
       icon: sel
      },
-     { 
-      name: "Zorba Tulum",
-      address: "Carr. Tulum-Boca Paila Km. 9, Tulum Beach, Zona Hotelera", 
-      lat: 20.13848611253323, lng: -87.4618182046472,
-      icon: zorba
-     },
-     { 
-      name: "UMO Smoke Shop (Bagatelle)",
-      address: "Carr. Tulum-Boca Paila Km 7, Tulum Beach", 
-      lat: 20.15376227521633, lng: -87.45752236705873,
-      icon: umo
-     }
+    //  { 
+    //   name: "Zorba Tulum",
+    //   address: "Carr. Tulum-Boca Paila Km. 9, Tulum Beach, Zona Hotelera", 
+    //   lat: 20.13848611253323, lng: -87.4618182046472,
+    //   icon: zorba
+    //  },
+    //  { 
+    //   name: "UMO Smoke Shop (Bagatelle)",
+    //   address: "Carr. Tulum-Boca Paila Km 7, Tulum Beach", 
+    //   lat: 20.15376227521633, lng: -87.45752236705873,
+    //   icon: umo
+    //  }
   ];
 
   const onMapLoad = (map) => {
@@ -96,7 +104,8 @@ function GMap() {
               }}
               icon={{
                 url: icon,
-                scaledSize: new google.maps.Size(50, 50)
+                // eslint-disable-next-line no-undef
+                scaledSize: new google.maps.Size(100, 100)
               }}
             >
               {isOpen && infoWindowData?.id === ind && (
@@ -112,10 +121,10 @@ function GMap() {
                     style={
                         {
                           color: "goldenrod",
-                          ["font-size"]: "24px"
+                          ["fontSize"]: "24px"
                         }
                       }>
-                      <FaStar style={
+                      {/* <FaStar style={
                         {
                           color: "goldenrod",
                           ["font-size"]: "24px"
@@ -124,7 +133,7 @@ function GMap() {
                       <FaStar/>
                       <FaStar/>
                       <FaStar/>
-                      <FaStar/>
+                      <FaStar/> */}
                     </div>
                     <p>Address: {infoWindowData.address}</p>
                     <a href="https://www.google.com/search?q=bonbonniere+tulum">Website</a>
